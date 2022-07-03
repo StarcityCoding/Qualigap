@@ -37,7 +37,7 @@ const PostDetail = ({ post }) => {
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
       case 'image':
         return (
-          <img
+          <Image
             key={index}
             alt={obj.title}
             height={obj.height}
@@ -65,7 +65,7 @@ const PostDetail = ({ post }) => {
 </div>
 </button>
         <div className="relative overflow-hidden mb-3 px-3">
-          <img src={post.featuredImage.url} alt="" className="lg:h-[500px] h-[280px] w-full object-center object-cover rounded-t-lg" />
+          <Image src={post.featuredImage.url} alt="" className="lg:h-[500px] h-[280px] w-full object-center object-cover rounded-t-lg" />
         </div>
         <div className="flex items-center w-full text-[#b3c5b5]">
             

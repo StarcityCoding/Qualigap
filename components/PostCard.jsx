@@ -24,7 +24,7 @@ const PostCard = ({ post }) => (
         src={post.featuredImage.url}
       />
     </div> */}
-       <Link href={`/post/${post.slug}`}><img src={post.featuredImage.url} alt="" height="" width="" className="cursor-pointer object-cover rounded-tr-[12px] rounded-tl-[12px] relative h-[280px] w-[900px]" />
+       <Link href={`/post/${post.slug}`}><Image src={post.featuredImage.url} alt="" height="" width="" className="cursor-pointer object-cover rounded-tr-[12px] rounded-tl-[12px] relative h-[280px] w-[900px]" />
        </Link>
       <div className="text-[#263c28] font-[500] text-sm absolute -mt-[30px] bg-[#f1cf69] px-5 py-[5px] mx-10 rounded-tr-lg rounded-tl-lg">
         <span className="">{moment(post.createdAt).format('MMM DD, YYYY')}</span>

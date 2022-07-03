@@ -101,7 +101,7 @@ const Header = () => {
              </span>
           </Link>
          
-            <span class="align-middle ml-8 pt-1 font-medium cursor-pointer dropdown">
+            <span className="align-middle ml-8 pt-1 font-medium cursor-pointer dropdown">
   <button className="dropbtn"><span className="inline-flex hover:text-[#f1cf69]">Our Products  <span className="">
                   < RiArrowDropDownLine size={30} />
                   </span></span> </button>

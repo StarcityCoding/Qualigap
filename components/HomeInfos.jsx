@@ -16,6 +16,7 @@ import agrochemical from '../public/agrochemical.jpg'
 import services from '../public/services.jpg'
 import agrochemical2 from '../public/agrochemical2.jpeg'
 import agrochem from '../public/agrochem.jpg'
+import agroconsultant from '../public/agroconsultant.png'
 import corn from '../public/corn.jpg'
 import seeds from '../public/seeds.jpg'
 import fertilizers from '../public/fertilizers.jpg'
@@ -832,7 +833,7 @@ const HomeInfos = () => {
             
      <div className="slider rounded-lg">
     
-      <div class="slides">
+      <div className="slides">
         <div id="slide-1">
           <Image
           alt=""
@@ -1131,8 +1132,8 @@ const HomeInfos = () => {
 </div>
                
             <div className="pt-5">
-            <img
-                     src='../agroconsultant.png'
+            <Image
+                     src={agroconsultant}
                      width=''
                      height=''
                     alt='/'
