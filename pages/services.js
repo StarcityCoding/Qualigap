@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import agroconsultant from '../public/agroconsultant.png'
 import seedlings from '../public/seedlings.jpg'
 import { BiUserVoice } from 'react-icons/bi';
 import { MdOutlineCompost, MdOutlineContactSupport } from "react-icons/md";
@@ -181,8 +182,8 @@ export default function OurServices(){
 </div>
           
        <div className="pt-5">
-       <img
-                src='../services.jpg'
+       <Image
+                src={agroconsultant}
                 width=''
                 height=''
                alt='/'

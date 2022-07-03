@@ -1,5 +1,7 @@
 
 import { MdOutlineCompost, MdOutlineContactSupport } from "react-icons/md";
+import corn from '../public/corn.jpg'
+import Image from "next/image";
 import { GiChemicalDrop,GiWorld, GiPlantSeed, GiFarmTractor, GiChemicalTank, GiFarmer, GiMasterOfArms, GiSeedling } from "react-icons/gi";
 
 
@@ -64,8 +66,8 @@ export default function AboutUs(){
                       <div className="basis-2/4">
 
                       <div className="lg:py-20 pb-10 lg:px-16 md:px-16 px-3">
-            <img
-                     src='../services.jpg'
+            <Image
+                     src={corn}
                      width=''
                      height=''
                     alt='/'
