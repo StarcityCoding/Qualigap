@@ -1,23 +1,13 @@
 
 import Image from 'next/image';
 import seeds from '../public/seeds.jpg';
-import { useState } from 'react';
 import seedlings from '../public/seedlings.jpg'
-import Slider from '../components/Slider';
-import placeholder2 from '../public/placeholder2.jpg'
-import placeholder23 from '../public/placeholder23.jpg'
-import agrochemical from '../public/agrochemical.jpg'
-import services from '../public/services.jpg'
-import agrochemical2 from '../public/agrochemical2.jpeg'
 import agrochem from '../public/agrochem.jpg'
 import corn from '../public/corn.jpg'
 import fertilizers from '../public/fertilizers.jpg'
 import tractor from '../public/tractor.jpg'
 import abstract from '../public/abstract.jpg'
 import fertilizer from '../public/fertilizer.jpg'
-import { MdOutlineCompost, MdOutlineContactSupport } from "react-icons/md";
-import { GiChemicalDrop,GiWorld, GiPlantSeed, GiFarmTractor, GiChemicalTank, GiFarmer, GiMasterOfArms, GiSeedling } from "react-icons/gi";
-
 
 
 
