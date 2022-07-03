@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { RiMenu3Line, RiCloseLine, RiArrowDropDownLine } from 'react-icons/ri';
 import Image from 'next/image';
-import NavLogo from '../public/navLogo.png'
 import "animate.css/animate.min.css";
 import ScrollAnimation from 'react-animate-on-scroll';
 
