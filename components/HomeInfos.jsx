@@ -1124,6 +1124,16 @@ const HomeInfos = () => {
 </button>
 </div>
                
+            <div className="pt-5 lg:hidden">
+            <Image
+                     src={agroconsultant}
+                     width="500px"
+                     height="600px"
+                    alt='/'
+                    className='rounded-[12px] object-left h-[600px] w-[500px] object-cover lg:h-[250px]'
+                  />    
+                  </div>   
+            <div className="hidden lg:contents">
             <div className="pt-5">
             <Image
                      src={agroconsultant}
@@ -1132,6 +1142,7 @@ const HomeInfos = () => {
                     alt='/'
                     className='rounded-[12px] object-left h-[400px] w-[800px] object-cover lg:h-[250px]'
                   />    
+                  </div>   
                   </div>   
 
 
