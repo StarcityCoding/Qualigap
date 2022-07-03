@@ -181,16 +181,26 @@ export default function OurServices(){
 </button>
 </div>
           
-       <div className="pt-5">
-       <Image
-                src={agroconsultant}
-                width=''
-                height=''
-               alt='/'
-               className='rounded-[12px] lg:object-center h-[400px] w-[800px] lg:object-cover lg:h-[250px]'
-             />    
-             </div>   
-
+<div className="pt-5 lg:hidden">
+            <Image
+                     src={agroconsultant}
+                     width="500px"
+                     height="600px"
+                    alt='/'
+                    className='rounded-[12px] object-left h-[600px] w-[500px] object-cover lg:h-[250px]'
+                  />    
+                  </div>   
+            <div className="hidden lg:contents">
+            <div className="pt-5">
+            <Image
+                     src={agroconsultant}
+                     width=""
+                     height=""
+                    alt='/'
+                    className='rounded-[12px] object-left h-[400px] w-[800px] object-cover lg:h-[250px]'
+                  />    
+                  </div>   
+                  </div>   
 
              <div className="pt-12">
 
