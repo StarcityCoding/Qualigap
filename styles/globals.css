@@ -14,3 +14,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+.sticky-bar{position:relative;z-index:3}
+.sticky-bar.stick{
+  -webkit-animation:fadeInDown .7s ease-in-out 0s 1 normal none running;-moz-animation:fadeInDown .7s ease-in-out 0s 1 normal none running;animation:fadeInDown .7s ease-in-out 0s 1 normal none running;-webkit-box-shadow:0 8px 20px 0 rgba(0,0,0,.05);box-shadow:0 8px 20px 0 rgba(0,0,0,.05);position:fixed;top:0;width:100%;z-index:999;left:0;-webkit-transition:all .3s ease 0s;-moz-transition:all .3s ease 0s;
+  transition:all .3s ease 0s;background:#fff;margin-top:0!important}
+
+
+  
