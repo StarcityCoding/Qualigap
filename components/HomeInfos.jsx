@@ -9,12 +9,6 @@ import { IoIosCheckmarkCircle } from 'react-icons/io'
 import "animate.css/animate.min.css";
 import ScrollAnimation from 'react-animate-on-scroll';
 import seedlings from '../public/seedlings.jpg'
-import Slider from '../components/Slider';
-import placeholder2 from '../public/placeholder2.jpg'
-import placeholder23 from '../public/placeholder23.jpg'
-import agrochemical from '../public/agrochemical.jpg'
-import services from '../public/services.jpg'
-import agrochemical2 from '../public/agrochemical2.jpeg'
 import agrochem from '../public/agrochem.jpg'
 import agroconsultant from '../public/agroconsultant.png'
 import corn from '../public/corn.jpg'
@@ -24,7 +18,6 @@ import tractor from '../public/tractor.jpg'
 import abstract from '../public/abstract.jpg'
 import fertilizer from '../public/fertilizer.jpg'
 import { TbArrowRight } from "react-icons/tb";
-import { MdOutlineCompost, MdOutlineContactSupport } from "react-icons/md";
 import { GiChemicalDrop,GiWorld, GiPlantSeed, GiFarmTractor, GiChemicalTank, GiFarmer, GiMasterOfArms, GiSeedling, GiFertilizerBag } from "react-icons/gi";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
@@ -1134,8 +1127,8 @@ const HomeInfos = () => {
             <div className="pt-5">
             <Image
                      src={agroconsultant}
-                     width=''
-                     height=''
+                     width=""
+                     height=""
                     alt='/'
                     className='rounded-[12px] object-left h-[400px] w-[800px] object-cover lg:h-[250px]'
                   />    
