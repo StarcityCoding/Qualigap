@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { urlFor, client } from './api/sanity';
+import { urlFor, client } from './api/client'
 import Image from 'next/image';
 import seeds from '../public/seeds.jpg'
 import Head from 'next/head'
