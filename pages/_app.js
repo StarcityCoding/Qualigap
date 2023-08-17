@@ -10,11 +10,9 @@ export default function App({ Component, pageProps }) {
   return (
     <>
     <Head>
-
-    <meta property="og:image" content='https://res.cloudinary.com/ddpnai51v/image/upload/v1692268532/qualigaplimited_k4lag5.png'/>
-        <meta name="twitter:image" content='https://res.cloudinary.com/ddpnai51v/image/upload/v1692268532/qualigaplimited_k4lag5.png'/>
-        <meta property="og:image:width" content="600"/>
-        <meta property="og:image:height" content="600"/>
+    <meta name="google-site-verification" content="yd6XXhS7FbSkgVT3VKVGXgXy5nfxceiRN1zwqsxZTsE" />
+    <meta property="og:image" content='https://res.cloudinary.com/ddpnai51v/image/upload/v1692284875/qualigap_limited_logo_pcaavr.png'/>
+        <meta name="twitter:image" content='https://res.cloudinary.com/ddpnai51v/image/upload/v1692284875/qualigap_limited_logo_pcaavr.png'/>
         <meta name="keywords" content="Agro supplies,Agricultural equipment,Farming tools,Crop solutions,Agrochemicals,Farm consultation,Agricultural products,Agribusiness solutions,Farming essentials,Crop management,Agro services,Farm technology,Sustainable agriculture,Farm machinery,Crop nutrition,Agro experts,Farm innovation,Agricultural solutions,Farm productivity,Agro marketplace"/>
     </Head>
 
