@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { FaRegUserCircle } from "react-icons/fa";
 import { MdOutlineCategory } from "react-icons/md";
 import moment from 'moment';
+import { NextSeo } from 'next-seo';
 
 
 export default function OurBlog({ blogPosts }){
@@ -14,6 +15,14 @@ export default function OurBlog({ blogPosts }){
             <Head>
         <title>Our Blog | Qualigap.com</title>
       </Head>
+      <NextSeo
+            title='Our Blog | Qualigap.com'
+            canonical='https://qualigap.com/blog'
+            openGraph={{
+              type: 'article',
+              url: 'https://qualigap.com/blog',
+          }}
+        />
        <div className="left-0 top-0 w-full">
 
 <div className="header-bg1 bg-cover bg-no-repeat bg-center bg-[#08011DA8] bg-blend-darken relative">

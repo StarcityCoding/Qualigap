@@ -4,10 +4,12 @@ import { urlFor } from '../pages/api/client';
 import { PortableText } from '@portabletext/react';
 import { sanityCMSImageLoader } from '../util';
 import { FaRegUserCircle } from "react-icons/fa";
+import {useRouter} from "next/router";
 
 import moment from 'moment';
 import { MdDateRange } from 'react-icons/md';
 import Image from 'next/image';
+import { FacebookIcon, FacebookShareButton, TwitterIcon, TwitterShareButton, WhatsappIcon, WhatsappShareButton } from 'next-share';
 
 function BlogPost({ post }) {
   return (
@@ -61,7 +63,29 @@ function BlogPost({ post }) {
       <PortableText value={post.body} />
       </div>
 
-            
+<div className='flex flex-col space-y-2 px-5 pt-2 lg:pt-6 pb-2'>
+      <h1 className='text-[#b3c5b5]'>Share:</h1>
+      <div className='flex items-center space-x-4'>
+      <FacebookShareButton
+       
+        url={`https://qualigap.com/${post.slug.current}`} >
+        <FacebookIcon size={32} round />
+      </FacebookShareButton>
+
+      <WhatsappShareButton
+    
+        url={`https://qualigap.com/${post.slug.current}`} >
+        <WhatsappIcon size={32} round />
+      </WhatsappShareButton>
+
+
+      <TwitterShareButton
+  
+        url={`https://qualigap.com/${post.slug.current}`} >
+        <TwitterIcon size={32} round />
+      </TwitterShareButton>
+    </div>
+    </div>
   <div className="border-b-white/40 border-b-[1px] mx-2 pt-2">
 
 </div>

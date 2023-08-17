@@ -76,8 +76,8 @@ const Header = () => {
   return (
   
 
-    <div className={color ? 'header header-bg shadow-md' : 'header'}>
-      <div className="container mx-auto flex px-10 items-center flex-row w-full lg:py-7 py-5">
+    <header className={color ? 'header header-bg shadow-md' : 'header'}>
+      <nav className="container mx-auto flex px-10 items-center flex-row w-full lg:py-7 py-5">
         <div className="block lg:basis-1/4 basis-3/4">
           <Link href="/">
             <span className="flex cursor-pointer font-bold text-lg text-white/80">
@@ -491,10 +491,10 @@ const Header = () => {
 
       
 
-      </div>
+      </nav>
 
        
-    </div>
+    </header>
 
     
   );

@@ -7,6 +7,7 @@ import Head from 'next/head'
 import { MdOutlineCompost, MdOutlineContactSupport } from "react-icons/md";
 import { urlFor, client } from '../pages/api/client';
 import { GiChemicalDrop,GiWorld, GiPlantSeed, GiFarmTractor, GiChemicalTank, GiFarmer, GiMasterOfArms, GiSeedling } from "react-icons/gi";
+import { NextSeo } from 'next-seo';
 
 
 
@@ -41,6 +42,14 @@ export default function ContactUs(){
             <Head>
         <title>Contact Us | Qualigap.com</title>
       </Head>
+      <NextSeo
+            title='Contact Us | Qualigap.com'
+            canonical='https://qualigap.com/contact-us'
+            openGraph={{
+           
+              url: 'https://qualigap.com/contact-us',
+          }}
+        />
        <div className="left-0 top-0 w-full">
 
 <div className="header-bg1 bg-cover bg-no-repeat bg-center bg-[#08011DA8] bg-blend-darken relative">

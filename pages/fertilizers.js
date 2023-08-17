@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { urlFor, client } from '../pages/api/client';
 import Head from 'next/head'
+import { NextSeo } from 'next-seo';
 
 
 
@@ -29,6 +30,14 @@ export default function Fertilzers(){
       <Head>
         <title>Fertilizer Products | Qualigap.com</title>
       </Head>
+      <NextSeo
+            title='Fertilizer Products | Qualigap.com'
+            canonical='https://qualigap.com/fertilizers'
+            openGraph={{
+           
+              url: 'https://qualigap.com/fertilizers',
+          }}
+        />
        <div className="left-0 top-0 w-full">
 
 <div className="fertilizers bg-cover bg-no-repeat bg-center bg-[#08011DA8] bg-blend-darken relative">

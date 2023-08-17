@@ -6,6 +6,7 @@ import { BiUserVoice } from 'react-icons/bi';
 import Head from 'next/head'
 import { urlFor, client } from '../pages/api/client';
 import { GiFarmTractor } from "react-icons/gi";
+import { NextSeo } from 'next-seo';
 
 
 
@@ -35,6 +36,14 @@ export default function OurServices(){
         <Head>
         <title>Our Services | Qualigap.com</title>
       </Head>
+      <NextSeo
+            title='Our Services | Qualigap.com'
+            canonical='https://qualigap.com/services'
+            openGraph={{
+           
+              url: 'https://qualigap.com/services',
+          }}
+        />
        <div className="left-0 top-0 w-full">
 
 <div className="header-bg1 bg-cover bg-no-repeat bg-center bg-[#08011DA8] bg-blend-darken relative">

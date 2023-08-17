@@ -3,6 +3,7 @@ import { urlFor, client } from '../pages/api/client';
 import Image from 'next/image';
 import agrochem from '../public/agrochem.jpg'
 import Head from 'next/head'
+import { NextSeo } from 'next-seo';
 
 
 
@@ -30,6 +31,14 @@ export default function AgroChemicals(){
           <Head>
         <title>Agrochemical Products | Qualigap.com</title>
       </Head>
+      <NextSeo
+            title='Agrochemical Products | Qualigap.com'
+            canonical='https://qualigap.com/agrochemicals'
+            openGraph={{
+           
+              url: 'https://qualigap.com/agrochemicals',
+          }}
+        />
        <div className="left-0 top-0 w-full">
 
 <div className="agrochems bg-cover bg-no-repeat bg-center bg-[#08011DA8] bg-blend-darken relative">

@@ -2,7 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { IoIosArrowRoundBack } from 'react-icons/io';
-import { client } from '../api/client';
+import { client, urlFor } from '../api/client';
 
 import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm, Loader } from '../../components';
 
@@ -10,6 +10,8 @@ import Head from 'next/head';
 
 import BlogPost from '../../components/BlogPost';
 import RelatedPost from '../../components/RelatedPosts';
+import { NextSeo } from 'next-seo';
+import moment from 'moment';
 
 
 
@@ -22,9 +24,37 @@ const PostDetails = ({ post, relatedPosts }) => {
 
   return (
     <>
-                <Head>
+       <Head>
         <title>{post.title}</title>
+        <meta property="og:image" content={urlFor(post.mainImage)}/>
+        <meta name="twitter:url" content={`https://qualigap.com/${post.slug.current}`}/>
+        <meta name="twitter:image" content={urlFor(post.mainImage)}/>
+        <meta name="twitter:data2" content={post.title}/>
       </Head>
+            <NextSeo
+            title={post.title}
+            description={post.excerpt}
+            canonical={`https://qualigap.com/${post.slug.current}`}
+            openGraph={{
+                type: 'article',
+                article: {
+                    publishedTime: `${moment(post.publishedAt).format('MMM DD, YYYY')}`,
+              
+                    authors: [
+                        `${post.author.name}`,
+                    ],
+                },
+                url: `https://qualigap.com/${post.slug.current}`,
+                images: {
+                    url: 'https://dykraf.com/img/logo.jpg',
+                    width: 850,
+                    height: 650,
+                    alt: `${post.title}`,
+                },
+                site_name: 'Qualigap.com'
+            }}
+        />
+             
     <div className="w-full">
 
 <div className="header-bg1 bg-cover bg-no-repeat bg-center bg-[#08011DA8] bg-blend-darken relative">
@@ -105,6 +135,7 @@ export async function getServerSideProps(context) {
   const query = `*[_type == "blog" && slug.current == $slug][0]{
     _id,
     title,
+    slug,
     mainImage,
     excerpt,
     body,

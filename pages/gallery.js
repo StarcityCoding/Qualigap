@@ -10,6 +10,7 @@ import tractor from '../public/tractor.jpg'
 import abstract from '../public/abstract.jpg'
 import fertilizer from '../public/fertilizer.jpg'
 import Head from 'next/head'
+import { NextSeo } from 'next-seo';
 
 
 
@@ -34,6 +35,14 @@ export default function Gallery(){
             <Head>
         <title>Products Gallery | Qualigap.com</title>
       </Head>
+      <NextSeo
+            title='Products Gallery | Qualigap.com'
+            canonical='https://qualigap.com/gallery'
+            openGraph={{
+           
+              url: 'https://qualigap.com/gallery',
+          }}
+        />
        <div className="left-0 top-0 w-full">
 
 <div className="header-bg1 bg-cover bg-no-repeat bg-center bg-[#08011DA8] bg-blend-darken relative">

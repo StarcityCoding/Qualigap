@@ -4,9 +4,7 @@ import { GiSeedling } from "react-icons/gi";
 import { HiOutlinePhone } from "react-icons/hi";
 import { MdOutlineEmail, MdLocationPin } from "react-icons/md";
 import Link from 'next/link';
-import { AiOutlineCopyrightCircle, AiOutlineMail } from 'react-icons/ai';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
-import { FaFacebook, FaInstagram } from 'react-icons/fa';
+
 
 
 const Footer = () => {

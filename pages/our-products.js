@@ -8,6 +8,7 @@ import agrochem from '../public/agrochem.jpg'
 import seeds from '../public/seeds.jpg'
 import fertilizers from '../public/fertilizers.jpg'
 import { GiChemicalDrop,GiWorld, GiPlantSeed, GiFarmTractor, GiChemicalTank, GiFarmer, GiMasterOfArms, GiSeedling, GiFertilizerBag } from "react-icons/gi";
+import { NextSeo } from 'next-seo';
 
 
 
@@ -18,6 +19,14 @@ export default function OurProducts(){
             <Head>
         <title>Our Products | Qualigap.com</title>
       </Head>
+      <NextSeo
+            title='Our Products | Qualigap.com'
+            canonical='https://qualigap.com/our-products'
+            openGraph={{
+           
+              url: 'https://qualigap.com/our-products',
+          }}
+        />
        <div className="left-0 top-0 w-full">
 
 <div className="header-bg1 bg-cover bg-no-repeat bg-center bg-[#08011DA8] bg-blend-darken relative">

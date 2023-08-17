@@ -5,6 +5,7 @@ import Head from 'next/head'
 import { urlFor, client } from '../pages/api/client';
 import { GiFarmTractor, GiFarmer, GiSeedling } from "react-icons/gi";
 import {PortableText} from '@portabletext/react'
+import { NextSeo } from 'next-seo';
 
 
 
@@ -84,6 +85,14 @@ export default function AboutUs(){
             <Head>
         <title>About Us | Qualigap.com</title>
       </Head>
+      <NextSeo
+            title='About Us | Qualigap.com'
+            canonical='https://qualigap.com/about-us'
+            openGraph={{
+           
+              url: 'https://qualigap.com/about-us',
+          }}
+        />
        <div className="left-0 top-0 w-full">
 
 <div className="header-bg1 bg-cover bg-no-repeat bg-center bg-[#08011DA8] bg-blend-darken relative">

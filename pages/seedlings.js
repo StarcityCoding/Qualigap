@@ -3,6 +3,7 @@ import { urlFor, client } from './api/client'
 import Image from 'next/image';
 import seeds from '../public/seeds.jpg'
 import Head from 'next/head'
+import { NextSeo } from 'next-seo';
 
 
 
@@ -30,6 +31,14 @@ export default function SeedlingProducts(){
           <Head>
         <title>Seedling Products | Qualigap.com</title>
       </Head>
+      <NextSeo
+            title='Seedling Products | Qualigap.com'
+            canonical='https://qualigap.com/seedlings'
+            openGraph={{
+           
+              url: 'https://qualigap.com/seedlings',
+          }}
+        />
        <div className="left-0 top-0 w-full">
 
 <div className="seedlings bg-cover bg-no-repeat bg-center bg-[#08011DA8] bg-blend-darken relative">
