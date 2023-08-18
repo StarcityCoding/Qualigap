@@ -67,7 +67,7 @@ const [partners, setPartners] = useState([]);
     <div className={`flex justify-center items-center w-full slidesc lg:hidden`}>
 {partners.map((partner, index) => (
   
-  <Link key={index} href={partner.link} className={`sm:flex-1 flex justify-center items-center relative mx-10 md:mx-5`}>
+  <Link key={index} href={`${partner.link}`} className={`sm:flex-1 flex justify-center items-center relative mx-10 md:mx-5`}>
                    <img src={urlFor(partner.imgUrl)} alt={partner.title} className='opacity-70 md:opacity-40 w-[80px]'
                 />
   </Link>
@@ -76,7 +76,7 @@ const [partners, setPartners] = useState([]);
     <div className={`justify-center items-center w-full slidesc4 hidden lg:flex`}>
 {partners.map((partner, index) => (
   
-  <Link key={index} href={partner.link} className={`sm:flex-1 flex justify-center items-center relative mx-14`}>
+  <Link key={index} href={`${partner.link}`} className={`sm:flex-1 flex justify-center items-center relative mx-14`}>
                    <img src={urlFor(partner.imgUrl)} alt={partner.title} className='opacity-70 w-[90px]'
                 />
   </Link>
