@@ -112,7 +112,7 @@ const Header = () => {
   <span className="dropdown-content bg-[#334b35] fixed z-10 text-white/80 rounded-lg pt-8 pb-3">
     <Link href="../fertilizers">Fertilizer Products</Link>
     <Link href="../agrochemicals">Chemical Products</Link>
-    <Link href="../seedlings">Seedling Products</Link>
+    <Link href="../seedlings">Certified Seeds</Link>
     
   </span>
 </span>
@@ -231,7 +231,7 @@ const Header = () => {
             <GiPlantSeed size={15} />
             </div>
             
-                </div> <div className="relative -top-1 pl-[25px]">Seedlings</div>
+                </div> <div className="relative -top-1 pl-[25px]">Certified Seeds</div>
               </li></Link>
 
 

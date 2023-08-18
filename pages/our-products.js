@@ -9,11 +9,24 @@ import seeds from '../public/seeds.jpg'
 import fertilizers from '../public/fertilizers.jpg'
 import { GiChemicalDrop,GiWorld, GiPlantSeed, GiFarmTractor, GiChemicalTank, GiFarmer, GiMasterOfArms, GiSeedling, GiFertilizerBag } from "react-icons/gi";
 import { NextSeo } from 'next-seo';
+import { useEffect, useState } from 'react';
+import { client, urlFor } from './api/client';
 
 
 
 
 export default function OurProducts(){
+  const [products, setProducts] = useState([]);
+
+
+  useEffect(() => {
+
+    const productsquery = '*[_type == "products"]';
+    client.fetch(productsquery).then((data) => {
+      setProducts(data);
+    });
+
+  }, []);
     return(
       <>
             <Head>
@@ -68,149 +81,67 @@ export default function OurProducts(){
   
     </div>
 
-    <div className="font-light px-4 md:container md:mx-auto md:lg-10 grid lg:grid-cols-3 grid-cols-1 gap-y-[17px] 2xl:gap-3 justify-items-center">
+    <div className="font-light px-4 md:container md:px-12 lg:px-16 md:gap-6 md:lg-10 grid lg:grid-cols-2 grid-cols-1 gap-y-[17px] 2xl:gap-3 justify-items-center">
                 
                 
               
-                <div className="bg-[#263c28] mt-5 md:mx-24 lg:mx-0 text-white/90 text-center rounded-[15px] shadow-sm shaddow-[#b3c5b5]">
-                <Image
-                    src={agrochem}
-                    width='900px'
-                    height='665px'
-                    alt='/'
-                    className='rounded-tr-[12px] rounded-tl-[12px] relative'
-                  />
-                  <button><div
-            style={{ size:'45px', color:'#f1cf69' }}
-            className='text-center justify-center rotator-ef'
-          >
-             <div className="bg-[#263c28] shadow-md border-gray-400 p-4 rounded-full relative -mt-16 content-center justify-center">
-            <GiChemicalDrop size={70} />
-            </div>
-            
-                </div>
-                </button>
-                <div className="lg:ml-5 py-3 px-8 ">
-                
+                {products.map((product, index) => {
 
-                    <h3 className="font-extrabold text-2xl py-4">Chemicals</h3>
-                    <p className="leading-8 font-light">
-                    Agrochemicals that prevent the plants from insecticide, fungicide, herbicide, acaricide, also serving as regulators and stimulants.
+                   if (!product.title || !product.description || !product.slug || !product.imgUrl || !product.icon) {
+                     return null; // Skip rendering this product card
+                   }
+                 
+                   return (
+
+               <div key={index} className="bg-[#263c28] mt-5 lg:mx-0 text-white/90 text-center rounded-[15px] shadow-sm shaddow-[#b3c5b5]">
+             
+                  <img src={urlFor(product.imgUrl)}
+                                      alt='/'
+                                      width='900px'
+                                      className='rounded-tr-[12px] object-cover h-[250px] rounded-tl-[12px] relative'
+                                      />
+
+                 <button><div
+           style={{ size:'45px', color:'#f1cf69' }}
+           className='text-center justify-center rotator-ef'
+         >
+            <div className="bg-[#263c28] shadow-md border-gray-400 p-4 rounded-full relative -mt-16 content-center justify-center">
+           <img src={urlFor(product.icon)}/>
+           </div>
+           
+               </div>
+               </button>
+               <div className="lg:ml-5 py-3 px-8 ">
+               
+
+                   <h3 className="font-extrabold text-2xl py-4">{product.title}</h3>
+                   <p className="leading-8 font-light">
+                   {product.description}
                     </p>
 
-                   <Link href="../agrochemicals">
-                    <button> 
-                      
-                      <div
-                  style={{ size:'', color:'#263c28' }}
-                  className=''
-                >
-                   <div className="hover:scale-105 ease-in duration-300 bg-[#f1cf69] mt-4 w-[45px] hover:bg-opacity-60 hover:text-white/70 shadow-md border-gray-400 p-2 rounded-full">
-                  <HiOutlineArrowNarrowRight size={30} />
-                  </div>
-                      </div>
-                   </button>
-                   </Link>
+                  <Link href={`/${product.slug}`}>
+                   <button> 
+                     
+                     <div
+                 style={{ size:'', color:'#263c28' }}
+                 className=''
+               >
+                  <div className="hover:scale-105 ease-in duration-300 bg-[#f1cf69] mt-4 w-[45px] hover:bg-opacity-60 hover:text-white/70 shadow-md border-gray-400 p-2 rounded-full">
+                 <HiOutlineArrowNarrowRight size={30} />
+                 </div>
+                     </div>
+                  </button>
+                  </Link>
 
-                   
-                    </div>
-                    </div>
+                  
+                   </div>
+                   </div>
+                     );
+                     })}
                     {/*  */}
 
 
-                    <div className="bg-[#263c28] mt-5 md:mx-24 lg:mx-0 lg:ml-5 text-white/90 text-center rounded-[15px] shadow-sm shaddow-[#b3c5b5]">
-                <Image
-                    src={fertilizers}
-                    width=''
-                    height='620px'
-                    alt='/'
-                    className='rounded-tr-[12px] rounded-tl-[12px] relative'
-                  />
-                  <button><div
-            style={{ size:'45px', color:'#f1cf69' }}
-            className='text-center justify-center rotator-ef'
-          >
-             <div className="bg-[#263c28] shadow-md border-gray-400 p-4 rounded-full relative -mt-16 content-center justify-center">
-            <GiFertilizerBag size={70} />
-            </div>
-            
-                </div>
-                </button>
-                <div className="lg:ml-5 py-3 px-8 ">
-                
-
-                    <h3 className="font-extrabold text-2xl py-4">Fertilizers</h3>
-                    <p className="leading-8 font-light">
-                    When added to soil or water, plants can develop tolerance against pests like weeds, insects and diseases.
-                 </p>
-
-                 <Link href="../fertilizers">
-                    <button> 
-                      
-                      <div
-                  style={{ size:'', color:'#263c28' }}
-                  className=''
-                >
-                   <div className="hover:scale-105 ease-in duration-300 bg-[#f1cf69] mt-4 w-[45px] shadow-md border-gray-400 p-2 rounded-full hover:bg-opacity-60 hover:text-white/70">
-                  <HiOutlineArrowNarrowRight size={30} />
-                  </div>
-                      </div>
-                   </button>
-                   </Link>
-
-                   
-                    </div>
-                    </div>
-
-                    {/*  */}
-
-                    
-
-                    <div className="bg-[#263c28] mt-5 md:mx-24 lg:mx-0 lg:ml-5 text-white/90 text-center rounded-[15px] shadow-sm shaddow-[#b3c5b5]">
-                <Image
-                    src={seeds}
-                    width=''
-                    height='500px'
-                    alt='/'
-                    className='rounded-tr-[12px] rounded-tl-[12px] relative'
-                  />
-                  <button><div
-            style={{ size:'45px', color:'#f1cf69' }}
-            className='text-center justify-center rotator-ef'
-          >
-             <div className="bg-[#263c28] shadow-md border-gray-400 p-4 rounded-full relative -mt-16 content-center justify-center">
-            <GiPlantSeed size={70} />
-            </div>
-            
-                </div>
-                </button>
-                <div className="lg:ml-5 py-3 px-8 ">
-                
-
-                    <h3 className="font-extrabold text-2xl py-4">Seedlings</h3>
-                    <p className="leading-8 font-light">
-                    Replenish organic matter, Increase yields and reduce fertilizer costs by planting crops that add nitrogen to the soil.
-                     </p>
-
-                     <Link href="../seedlings">
-                    <button href=""> 
-                      
-                      <div
-                  style={{ size:'', color:'#263c28' }}
-                  className=''
-                >
-                   <div className="hover:scale-105 ease-in duration-300 bg-[#f1cf69] mt-4 w-[45px] shadow-md border-gray-400 p-2 rounded-full hover:bg-opacity-60 hover:text-white/70">
-                  <HiOutlineArrowNarrowRight size={30} />
-                  </div>
-                      </div>
-                   </button>
-                   </Link>
-
-                   
-                    </div>
-                    </div>
-
-                    
+                                 
                     {/*  */}
               
            

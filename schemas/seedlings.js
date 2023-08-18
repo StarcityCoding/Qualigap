@@ -1,6 +1,6 @@
 export default{
     name:'seedlings',
-    title:'Seedling Products',
+    title:'Certified Seeds',
     type: 'document',
     fields:[
         {

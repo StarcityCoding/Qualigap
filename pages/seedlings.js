@@ -29,7 +29,7 @@ export default function SeedlingProducts(){
       return(
         <>
           <Head>
-        <title>Seedling Products | Qualigap.com</title>
+        <title>Certified Seeds | Qualigap.com</title>
       </Head>
       <NextSeo
             title='Seedling Products | Qualigap.com'
@@ -49,7 +49,7 @@ export default function SeedlingProducts(){
     <h1 className="text-3xl lg:text-7xl md:leading-[70px] 
     pt-[15vh] md:text-4xl lg:leading-[100px] leading-[50px] 
     font-extrabold font-Poppins gradient__tnext text-white/90 
-    content-center">Seedling Products</h1>
+    content-center">Certified Seed Products</h1>
     <button className="pl-2">
     <div className="border-b-white/60 border-b-[6px] w-[65px] mb-5 mt-6">
 
@@ -71,7 +71,7 @@ export default function SeedlingProducts(){
                   </h1>
              
                   <h1 className="text-white font-bold mb-1 text-[30px] lg:px-3 lg:text-[40px] lg:mb-5 pb-1">
-                      Seedlings
+                      Cerified Seeds
                   </h1>
                   <button>
                   <div className="border-b-[#b3c5b5] border-b-[5px] w-[65px] mb-8">
