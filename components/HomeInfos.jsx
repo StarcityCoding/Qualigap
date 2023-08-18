@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import ContactForm from './ContactForm';
-import Image from 'next/image';
 import Link from 'next/link';
 import { FaInfo, FaUserCog } from 'react-icons/fa'
 import { BiUserVoice } from 'react-icons/bi'
@@ -721,11 +720,17 @@ const HomeInfos = () => {
                 
   
     </div>
-            <div className="font-light px-4 md:container md:px-12 lg:px-16 md:gap-6 md:lg-10 grid lg:grid-cols-3 grid-cols-1 gap-y-[17px] 2xl:gap-3 justify-items-center">
+            <div className="font-light px-4 md:container md:px-12 lg:px-16 md:gap-6 md:lg-10 grid lg:grid-cols-2 grid-cols-1 gap-y-[17px] 2xl:gap-3 justify-items-center">
                 
                 
               
-                 {products.map((product, index) => (
+                 {products.map((product, index) => {
+
+                    if (!product.title || !product.description || !product.slug || !product.imgUrl || !product.icon) {
+                      return null; // Skip rendering this product card
+                    }
+                  
+                    return (
 
                 <div key={index} className="bg-[#263c28] mt-5 lg:mx-0 text-white/90 text-center rounded-[15px] shadow-sm shaddow-[#b3c5b5]">
               
@@ -770,7 +775,8 @@ const HomeInfos = () => {
                    
                     </div>
                     </div>
-                      ))}
+                      );
+                      })}
                 
 
                   
