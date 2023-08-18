@@ -63,25 +63,28 @@ const [partners, setPartners] = useState([]);
 
 
   {/* <div className='w-full flex items-center justify-center space-x-24'> */}
-  <section className={`flex justify-center items-center sliderc w-full`}>
-    <div className={`flex justify-center items-center w-full slidesc lg:hidden`}>
+  <section className={`flex justify-center items-center w-full lg:hidden`}>
+    <div className={`flex justify-center items-center w-full slidesc`}>
 {partners.map((partner, index) => (
   
   <Link key={index} href={`${partner.link}`} className={`sm:flex-1 flex justify-center items-center relative mx-10 md:mx-5`}>
-                   <img src={urlFor(partner.imgUrl)} alt={partner.title} className='opacity-70 md:opacity-40 w-[80px]'
+                   <img src={urlFor(partner.imgUrl)} alt={partner.title} className='opacity-50 md:opacity-40 w-[80px] rounded-[6px]'
                 />
   </Link>
         ))}
           </div>
-    <div className={`justify-center items-center w-full slidesc4 hidden lg:flex`}>
+          </section>
+          <section className={`justify-center items-center slidesc4 w-full hidden lg:flex`}>
+ 
 {partners.map((partner, index) => (
-  
-  <Link key={index} href={`${partner.link}`} className={`sm:flex-1 flex justify-center items-center relative mx-14`}>
-                   <img src={urlFor(partner.imgUrl)} alt={partner.title} className='opacity-70 w-[90px]'
+     <div className={`justify-center items-center`}>
+  <Link key={index} href={`${partner.link}`} className={`sm:flex-1 flex justify-center items-center mx-14`}>
+                   <img src={urlFor(partner.imgUrl)} alt={partner.title} className='opacity-60 w-[300px] h-[100px] rounded-[8px]'
                 />
   </Link>
+  </div>
         ))}
-          </div>
+         
           </section>
 
 

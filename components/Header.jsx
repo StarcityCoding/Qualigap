@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { urlFor, client } from '../pages/api/client';
 import { RiMenu3Line, RiCloseLine, RiArrowDropDownLine } from 'react-icons/ri';
 import "animate.css/animate.min.css";
+import {LiaBlogSolid} from "react-icons/lia"
 
 
 
 
-import { GiCheckMark, GiChemicalDrop, GiFarmer, GiFarmTractor, GiFertilizerBag, GiPlantSeed, GiSeedling } from 'react-icons/gi'
+import { GiCheckMark, GiChemicalDrop, GiFarmer, GiFarmTractor, GiFertilizerBag, GiPlantSeed, GiSeedling, GiWorld } from 'react-icons/gi'
 
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu, AiOutlineUsergroupDelete } from 'react-icons/ai';
 import { FaFacebook, FaInstagram, FaSeedling } from 'react-icons/fa';
@@ -15,8 +16,9 @@ import { GrGallery, GrBlog } from 'react-icons/gr';
 import { TiContacts } from 'react-icons/ti';
 
 import Link from 'next/link';
+import { BiPhotoAlbum } from 'react-icons/bi';
 
-const pages1 = [{name: 'Contact Us', slug: 'contact-us'}, {name: 'Our Blog', slug: 'blog'}]
+const pages1 = [{name: 'Our Partners', slug: 'partners'},{name: 'Contact Us', slug: 'contact-us'}]
 
 const Header = () => {
    
@@ -332,26 +334,40 @@ const Header = () => {
               <ul className='text-white/60'>
               
               
-              
+              <Link href='../partners'>
+              <li onClick={() => setNav(false)} className='cursor-pointer py-4 text-sm'><div
+            style={{ size:'15px' }}
+            className='absolute'
+          >
+             <div className="rounded-full">
+            <GiWorld size={12} />
+            </div>
+            
+                </div> <div className="relative -top-1 pl-[25px]">Our Partners</div>
+              </li></Link>
+
+
             <Link href='../blog'>
               <li onClick={() => setNav(false)} className='cursor-pointer py-4 text-sm'><div
             style={{ size:'15px' }}
-            className='text-green-800 absolute'
+            className='absolute'
           >
-             <div className="rounded-full text-green-800">
-            <GrBlog size={12} />
+             <div className="rounded-full">
+            <LiaBlogSolid size={12} />
             </div>
             
                 </div> <div className="relative -top-1 pl-[25px]">Our Blog</div>
               </li></Link>
+              
+ 
 
               <Link href='../gallery'>
               <li onClick={() => setNav(false)} className='cursor-pointer py-4 text-sm'><div
             style={{ size:'15px' }}
-            className='text-green-800 absolute'
+            className='absolute'
           >
-             <div className="rounded-full text-green-800">
-            <GrGallery size={12} />
+             <div className="rounded-full">
+            <BiPhotoAlbum size={12} />
             </div>
             
                 </div> <div className="relative -top-1 pl-[25px]">Photos Gallery</div>

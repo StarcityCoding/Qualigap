@@ -713,6 +713,22 @@ background:radial-gradient(circle at 16% 21%, rgba(245, 245, 245, 1) 0%, rgba(24
 
 }
 
+.slidesc img{
+  aspect-ratio: 3/2;
+}
+.sliderc4 {
+  overflow: hidden;
+}
+.slidesc4 {
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  width: 2500px;
+
+}
+
 
 .slidesc::-webkit-scrollbar {
  display: none;
@@ -731,13 +747,15 @@ background:radial-gradient(circle at 16% 21%, rgba(245, 245, 245, 1) 0%, rgba(24
   animation: slidec 10s linear infinite;
   animation-direction: alternate-reverse;
 }
-.slidesc4 > a {
+.slidesc4 > div {
   flex-shrink: 0;
   border-radius: 8px;
   position: relative;
   display: flex;
   animation: slidec4 10s linear infinite;
   animation-direction: alternate-reverse;
+  width: 300px;
+  height: 100px;
 }
 
 @keyframes slidec {
@@ -763,10 +781,23 @@ background:radial-gradient(circle at 16% 21%, rgba(245, 245, 245, 1) 0%, rgba(24
   text-decoration: none;
   position: relative;
 }
+
+.sliderc4 > a {
+  display: inline-flex;
+  background: white;
+  text-decoration: none;
+  position: relative;
+}
 .sliderc > a:active {
   color: #1c87c9;
 }
 .sliderc > a:focus {
+  background: #eee;
+}
+.sliderc4 > a:active {
+  color: #1c87c9;
+}
+.sliderc4 > a:focus {
   background: #eee;
 }
 
