@@ -3,77 +3,77 @@
 
 
     <url>
-        <loc>https://www.qualigap.com</loc>
+        <loc>https://qualigap.com</loc>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
     </url>
 
 
     <url>
-        <loc>https://www.qualigap.com/about-us</loc>
+        <loc>https://qualigap.com/about-us</loc>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
 
 
     <url>
-        <loc>https://www.qualigap.com/fertilizers</loc>
+        <loc>https://qualigap.com/fertilizers</loc>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
     </url>
 
 
     <url>
-        <loc>https://www.qualigap.com/agrochemicals</loc>
+        <loc>https://qualigap.com/agrochemicals</loc>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
     </url>
 
 
     <url>
-        <loc>https://www.qualigap.com/seedlings</loc>
+        <loc>https://qualigap.com/seedlings</loc>
         <changefreq>daily</changefreq>
   
     </url>
 
 
     <url>
-        <loc>https://www.qualigap.com/services</loc>
+        <loc>https://qualigap.com/services</loc>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
     </url>
 
 
     <url>
-        <loc>https://www.qualigap.com/contact-us</loc>
+        <loc>https://qualigap.com/contact-us</loc>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
 
 
     <url>
-        <loc>https://www.qualigap.com/blog</loc>
+        <loc>https://qualigap.com/blog</loc>
         <changefreq>daily</changefreq>
       
     </url>
 
 
     <url>
-        <loc>https://www.qualigap.com/gallery</loc>
+        <loc>https://qualigap.com/gallery</loc>
         <changefreq>daily</changefreq>
        
     </url>
 
 
     <url>
-        <loc>https://www.qualigap.com/our-products</loc>
+        <loc>https://qualigap.com/our-products</loc>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
     </url>
 
 
     <url>
-        <loc>https://www.qualigap.com/farm-explorer</loc>
+        <loc>https://qualigap.com/farm-explorer</loc>
         <changefreq>daily</changefreq>
      
     </url>
